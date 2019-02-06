@@ -18,9 +18,14 @@
             @Html.DisplayNameFor(model => model.CaretakerName)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.CaretakerType)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.DateJoinedCaretaker)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnimalTypeCaretaker)
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -32,7 +37,13 @@
             @Html.DisplayFor(modelItem => item.CaretakerName)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.CaretakerType)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.DateJoinedCaretaker)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnimalTypeCaretaker)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |

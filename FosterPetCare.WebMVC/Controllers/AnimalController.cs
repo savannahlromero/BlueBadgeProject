@@ -15,5 +15,10 @@ namespace FosterPetCare.WebMVC.Controllers
             var model = new AnimalEntry[0];
             return View(model);
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }

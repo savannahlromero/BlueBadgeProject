@@ -54,11 +54,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animal\AnimalCreate.cs" />
+    <Compile Include="Caretaker\CaretakerCreate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FosterPetCare.Data\FosterPetCare.Data.csproj">
+      <Project>{9E9BCD54-BD78-4A51-9091-1C3154CD882C}</Project>
+      <Name>FosterPetCare.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

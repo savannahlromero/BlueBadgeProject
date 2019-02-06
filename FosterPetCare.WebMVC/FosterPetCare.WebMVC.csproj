@@ -246,6 +246,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Animal\Index.cshtml" />
     <Content Include="Views\Caretaker\Index.cshtml" />
+    <Content Include="Views\Animal\Create.cshtml" />
+    <Content Include="Views\Caretaker\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
