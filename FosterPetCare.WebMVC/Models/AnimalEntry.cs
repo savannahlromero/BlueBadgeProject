@@ -9,6 +9,7 @@ namespace FosterPetCare.WebMVC.Models
 {
     public class AnimalEntry
     {
+        [Display(Name = "Animal ID")]
         public int AnimalID { get; set; }
         [Display(Name = "Name")]
         public string AnimalName { get; set; }

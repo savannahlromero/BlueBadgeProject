@@ -1,4 +1,5 @@
-﻿using FosterPetCare.WebMVC.Models;
+﻿using FosterPetCare.Models.Animal;
+using FosterPetCare.WebMVC.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,17 @@ namespace FosterPetCare.WebMVC.Controllers
         public ActionResult Create()
         {
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(AnimalCreate model)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View(model);
         }
     }
 }
