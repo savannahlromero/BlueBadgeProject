@@ -180,7 +180,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -257,6 +256,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FosterPetCare.Data\FosterPetCare.Data.csproj">
+      <Project>{9e9bcd54-bd78-4a51-9091-1c3154cd882c}</Project>
+      <Name>FosterPetCare.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FosterPetCare.Models\FosterPetCare.Models.csproj">
+      <Project>{8579b45a-3925-4f18-b17b-7c7a15d6d0f0}</Project>
+      <Name>FosterPetCare.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FosterPetCare.Services\FosterPetCare.Services.csproj">
+      <Project>{4e348d44-c452-40d8-980a-24e957e819ff}</Project>
+      <Name>FosterPetCare.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
