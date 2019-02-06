@@ -31,7 +31,9 @@ namespace FosterPetCare.Data
         {
             return new ApplicationDbContext();
         }
+
         public DbSet<Animal> Animals { get; set; }
+        public DbSet<Caretaker> Caretakers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
