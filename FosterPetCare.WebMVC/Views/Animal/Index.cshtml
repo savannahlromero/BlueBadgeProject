@@ -1,0 +1,57 @@
+﻿@model IEnumerable<FosterPetCare.WebMVC.Models.AnimalEntry>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AnimalID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnimalName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateJoinedAnimal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FosterBoolAnimal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdoptedBoolAnimal)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnimalID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnimalName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateJoinedAnimal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FosterBoolAnimal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdoptedBoolAnimal)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
