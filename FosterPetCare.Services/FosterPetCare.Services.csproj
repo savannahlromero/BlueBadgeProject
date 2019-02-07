@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimalService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FosterPetCare.Data\FosterPetCare.Data.csproj">
+      <Project>{9e9bcd54-bd78-4a51-9091-1c3154cd882c}</Project>
+      <Name>FosterPetCare.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FosterPetCare.Models\FosterPetCare.Models.csproj">
+      <Project>{8579b45a-3925-4f18-b17b-7c7a15d6d0f0}</Project>
+      <Name>FosterPetCare.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

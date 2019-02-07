@@ -26,11 +26,13 @@ namespace FosterPetCare.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(AnimalCreate model)
         {
-            if (ModelState.IsValid)
-            {
-
-            }
-            return View(model);
+            //if (ModelState.IsValid) return View(model);
+            //var service = CreateAnimalService(); // FIX
+            //if (service.CreateAnimal(model))
+            //{
+            //    return RedirectToAction("Index");
+            //};
+            //return View(model);
         }
     }
 }
