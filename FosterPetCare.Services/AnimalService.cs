@@ -66,8 +66,28 @@ namespace FosterPetCare.Services
                         AnimalName = entity.AnimalName,
                         AnimalType = entity.AnimalType,
                         DateJoinedAnimal = entity.DateJoinedAnimal,
+                        FosterBoolAnimal = entity.FosterBoolAnimal,
                         AdoptedBoolAnimal = entity.AdoptedBoolAnimal
                     };
+            }
+        }
+        public bool UpdateAnimal(AnimalEdit model)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Animals
+                    .Single(a => a.AnimalID == model.AnimalID);
+
+                entity.AnimalID = model.AnimalID;
+                entity.AnimalName = model.AnimalName;
+                entity.AnimalType = model.AnimalType;
+                entity.DateJoinedAnimal = model.DateJoinedAnimal;
+                entity.FosterBoolAnimal = model.FosterBoolAnimal;
+                entity.AdoptedBoolAnimal = model.AdoptedBoolAnimal;
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }

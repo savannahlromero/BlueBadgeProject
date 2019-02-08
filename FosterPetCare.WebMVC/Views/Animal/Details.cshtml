@@ -1,0 +1,64 @@
+﻿@model FosterPetCare.Models.Animal.AnimalDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AnimalDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnimalID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnimalName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnimalType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateJoinedAnimal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateJoinedAnimal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FosterBoolAnimal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FosterBoolAnimal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdoptedBoolAnimal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdoptedBoolAnimal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {id = Model.AnimalID}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -50,9 +50,51 @@ namespace FosterPetCare.WebMVC.Controllers
         public ActionResult Details(int id)
         {
             var service = new AnimalService();
-            var model = service.GetAnimalById(id);
+            var model = service.GetAnimalByID(id);
 
             return View(model);
+        }
+
+        // GET: Edit
+        public ActionResult Edit(int id)
+        {
+            var service = new AnimalService();
+            var detail = service.GetAnimalByID(id);
+            var model =
+                new AnimalEdit
+                {
+                    AnimalID = detail.AnimalID,
+                    AnimalName = detail.AnimalName,
+                    AnimalType = detail.AnimalType,
+                    DateJoinedAnimal = detail.DateJoinedAnimal,
+                    FosterBoolAnimal = detail.FosterBoolAnimal,
+                    AdoptedBoolAnimal = detail.AdoptedBoolAnimal
+                };
+            return View(model);
+        }
+
+        // POST: Edit
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, AnimalEdit model)
+        {
+            if(!ModelState.IsValid) return View(model);
+
+            if(model.AnimalID != id)
+            {
+                ModelState.AddModelError("", "ID Mismatch");
+                return View(model);
+            }
+            var service = new AnimalService();
+
+            if (service.UpdateAnimal(model))
+            {
+                TempData["SaveResult"] = "Your Animal Entry was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your Animal Entry could not be updated.");
+            return View();
         }
     }
 }

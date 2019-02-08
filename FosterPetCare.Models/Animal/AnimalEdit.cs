@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FosterPetCare.Models.Animal
 {
-    public class AnimalDetail
+    public class AnimalEdit
     {
         [Display(Name = "Animal ID")]
         public int AnimalID { get; set; }
@@ -22,10 +22,5 @@ namespace FosterPetCare.Models.Animal
         public bool FosterBoolAnimal { get; set; }
         [Display(Name = "Adopted?")]
         public bool AdoptedBoolAnimal { get; set; }
-        //[Display(Name = "Created")]
-        //public DateTimeOffset CreatedUtc { get; set; }
-        //[Display(Name = "Modified")]
-        //public DateTimeOffset? ModifiedUtc { get; set; }
-        //MAYBE ADD THIS, WE'LL SEE IF IT WORKETH
     }
 }
