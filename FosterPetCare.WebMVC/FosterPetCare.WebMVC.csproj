@@ -248,6 +248,7 @@
     <Content Include="Views\Caretaker\Create.cshtml" />
     <Content Include="Views\Animal\Details.cshtml" />
     <Content Include="Views\Animal\Edit.cshtml" />
+    <Content Include="Views\Animal\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

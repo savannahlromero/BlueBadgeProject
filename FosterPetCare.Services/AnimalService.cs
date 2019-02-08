@@ -90,5 +90,19 @@ namespace FosterPetCare.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+        public bool DeleteAnimal(int animalID)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Animals
+                    .Single(a => a.AnimalID == animalID);
+
+                ctx.Animals.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

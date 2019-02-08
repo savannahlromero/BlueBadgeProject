@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace FosterPetCare.WebMVC.Models
+namespace FosterPetCare.Models.Caretaker
 {
     public class CaretakerEntry
     {

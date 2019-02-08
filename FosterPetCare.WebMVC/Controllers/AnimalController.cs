@@ -96,5 +96,29 @@ namespace FosterPetCare.WebMVC.Controllers
             ModelState.AddModelError("", "Your Animal Entry could not be updated.");
             return View();
         }
+        // GET: Delete
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var service = new AnimalService();
+            var model = service.GetAnimalByID(id);
+
+            return View(model);
+        }
+
+        // POST: Delete
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = new AnimalService();
+
+            service.DeleteAnimal(id);
+
+            TempData["SaveResult"] = "Your Animal Entry was deleted.";
+
+            return RedirectToAction("Index");
+        }
     }
 }
