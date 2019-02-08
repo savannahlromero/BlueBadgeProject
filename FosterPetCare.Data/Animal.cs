@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FosterPetCare.Data
 {
-    public enum AnimalType { Dog, Cat, Bird, Reptile}
+    public enum AnimalType {Dog, Cat, Bird, Reptile}
     public class Animal
     {
         [Key]

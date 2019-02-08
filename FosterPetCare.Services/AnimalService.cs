@@ -37,12 +37,37 @@ namespace FosterPetCare.Services
                     ctx
                     .Animals
                     .Select(
+                        a =>
                         new AnimalEntry
                         {
-
+                            AnimalID = a.AnimalID,
+                            AnimalName = a.AnimalName,
+                            AnimalType = a.AnimalType,
+                            DateJoinedAnimal = a.DateJoinedAnimal,
+                            FosterBoolAnimal = a.FosterBoolAnimal,
+                            AdoptedBoolAnimal = a.AdoptedBoolAnimal
                         }
-
                         );
+                return query.ToArray();
+            }
+        }
+        public AnimalDetail GetAnimalByID(int animalID)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Animals
+                    .Single(a => a.AnimalID == animalID);
+                return
+                    new AnimalDetail
+                    {
+                        AnimalID = entity.AnimalID,
+                        AnimalName = entity.AnimalName,
+                        AnimalType = entity.AnimalType,
+                        DateJoinedAnimal = entity.DateJoinedAnimal,
+                        AdoptedBoolAnimal = entity.AdoptedBoolAnimal
+                    };
             }
         }
     }

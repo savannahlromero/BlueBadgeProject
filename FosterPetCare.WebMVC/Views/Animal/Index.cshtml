@@ -1,14 +1,28 @@
-﻿@model IEnumerable<FosterPetCare.WebMVC.Models.AnimalEntry>
+﻿@model IEnumerable<FosterPetCare.Models.Animal.AnimalEntry>
+ 
 
 @{
     ViewBag.Title = "Index";
 }
 
+
 <h2>Index</h2>
+
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+<div class="alert alert-success fade in" role="alert">
+
+    <button type="button" class="close" data-dismiss="alert">
+        <span>&times;</span>
+    </button>
+    @TempData["SaveResult"]
+</div>
+
+}
 <table class="table">
     <tr>
         <th>
@@ -32,32 +46,33 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.AnimalID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AnimalName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AnimalType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateJoinedAnimal)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FosterBoolAnimal)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AdoptedBoolAnimal)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateJoinedAnimal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FosterBoolAnimal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdoptedBoolAnimal)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {id=item.AnimalID}) |
+                @Html.ActionLink("Details", "Details", new {id=item.AnimalID}) |
+                @Html.ActionLink("Delete", "Delete", new {id=item.AnimalID})
+            </td>
+        </tr>
+    }
 
 </table>

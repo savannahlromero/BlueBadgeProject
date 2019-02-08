@@ -55,7 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal\AnimalCreate.cs" />
+    <Compile Include="Animal\AnimalEntry.cs" />
     <Compile Include="Caretaker\CaretakerCreate.cs" />
+    <Compile Include="Caretaker\CaretakerEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
