@@ -66,6 +66,10 @@
     <Compile Include="Migrations\201902111922481_AddedCaretakerCRUD.Designer.cs">
       <DependentUpon>201902111922481_AddedCaretakerCRUD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902131457096_AddedHistoryTable.cs" />
+    <Compile Include="Migrations\201902131457096_AddedHistoryTable.Designer.cs">
+      <DependentUpon>201902131457096_AddedHistoryTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -79,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902111922481_AddedCaretakerCRUD.resx">
       <DependentUpon>201902111922481_AddedCaretakerCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902131457096_AddedHistoryTable.resx">
+      <DependentUpon>201902131457096_AddedHistoryTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
