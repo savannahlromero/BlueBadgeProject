@@ -1,6 +1,6 @@
 ﻿using FosterPetCare.Data;
 using FosterPetCare.Models.Animal;
-using FosterPetCare.WebMVC.Models;
+using FosterPetCare.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -47,6 +47,25 @@ namespace FosterPetCare.Services
                 return query.ToArray();
             }
         }
+        public CaretakerDetail GetCaretakerByID(int caretakerID)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Caretakers
+                    .Single(c => c.CaretakerID == caretakerID);
+                return
+                    new CaretakerDetail
+                    {
+                        CaretakerID = entity.CaretakerID,
+                        CaretakerName = entity.CaretakerName,
+                        CaretakerType = entity.CaretakerType,
+                        DateJoinedCaretaker = entity.DateJoinedCaretaker,
+                        AnimalTypeCaretaker = entity.AnimalTypeCaretaker
+                    };
+            }
+        }
         public bool UpdateCaretaker(CaretakerEdit model)
         {
             using (var ctx = new ApplicationDbContext())
@@ -55,7 +74,29 @@ namespace FosterPetCare.Services
                     ctx
                     .Caretakers
                     .Single(c => c.CaretakerID == model.CaretakerID);
-                // FINISH ADDING STUFF HERE
+
+                entity.CaretakerID = model.CaretakerID;
+                entity.CaretakerName = model.CaretakerName;
+                entity.CaretakerType = model.CaretakerType;
+                entity.DateJoinedCaretaker = model.DateJoinedCaretaker;
+                entity.AnimalTypeCaretaker = model.AnimalTypeCaretaker;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteCaretaker(int caretakerID)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Caretakers
+                    .Single(c => c.CaretakerID == caretakerID);
+
+                ctx.Caretakers.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }

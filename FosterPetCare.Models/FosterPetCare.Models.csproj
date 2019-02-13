@@ -59,6 +59,8 @@
     <Compile Include="Animal\AnimalEdit.cs" />
     <Compile Include="Animal\AnimalEntry.cs" />
     <Compile Include="Caretaker\CaretakerCreate.cs" />
+    <Compile Include="Caretaker\CaretakerDetail.cs" />
+    <Compile Include="Caretaker\CaretakerEdit.cs" />
     <Compile Include="Caretaker\CaretakerEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -71,6 +73,9 @@
       <Project>{9E9BCD54-BD78-4A51-9091-1C3154CD882C}</Project>
       <Name>FosterPetCare.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="History\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

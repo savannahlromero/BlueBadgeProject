@@ -56,10 +56,15 @@
   <ItemGroup>
     <Compile Include="Animal.cs" />
     <Compile Include="Caretaker.cs" />
+    <Compile Include="History.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\201902061622236_initialMigration.cs" />
     <Compile Include="Migrations\201902061622236_initialMigration.Designer.cs">
       <DependentUpon>201902061622236_initialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902111922481_AddedCaretakerCRUD.cs" />
+    <Compile Include="Migrations\201902111922481_AddedCaretakerCRUD.Designer.cs">
+      <DependentUpon>201902111922481_AddedCaretakerCRUD.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +76,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201902061622236_initialMigration.resx">
       <DependentUpon>201902061622236_initialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902111922481_AddedCaretakerCRUD.resx">
+      <DependentUpon>201902111922481_AddedCaretakerCRUD.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

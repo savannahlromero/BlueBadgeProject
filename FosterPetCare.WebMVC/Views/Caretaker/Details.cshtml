@@ -1,0 +1,58 @@
+﻿@model FosterPetCare.Models.Caretaker.CaretakerDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CaretakerDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CaretakerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaretakerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaretakerName)
+        </dt>
+        
+        <dd>
+            @Html.DisplayFor(model => model.CaretakerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaretakerType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaretakerType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateJoinedCaretaker)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateJoinedCaretaker)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalTypeCaretaker)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnimalTypeCaretaker)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {id = Model.CaretakerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

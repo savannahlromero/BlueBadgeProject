@@ -15,7 +15,7 @@ namespace FosterPetCare.WebMVC.Controllers
         public ActionResult Index()
         {
             var service = new CaretakerService();
-            var model = service.GetCaretakers;
+            var model = service.GetCaretakers();
             return View(model);
         }
 
@@ -49,6 +49,70 @@ namespace FosterPetCare.WebMVC.Controllers
             var model = service.GetCaretakerByID(id);
 
             return View(model);
+        }
+        // GET: Edit
+        public ActionResult Edit(int id)
+        {
+            var service = new CaretakerService();
+            var detail = service.GetCaretakerByID(id);
+            var model =
+                new CaretakerEdit
+                {
+                    CaretakerID = detail.CaretakerID,
+                    CaretakerName = detail.CaretakerName,
+                    CaretakerType = detail.CaretakerType,
+                    DateJoinedCaretaker = detail.DateJoinedCaretaker,
+                    AnimalTypeCaretaker = detail.AnimalTypeCaretaker
+                };
+            return View(model);
+        }
+
+        // POST: Edit
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, CaretakerEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if(model.CaretakerID != id)
+            {
+                ModelState.AddModelError("", "ID Mismatch");
+                return View(model);
+            }
+            var service = new CaretakerService();
+
+            if (service.UpdateCaretaker(model))
+            {
+                TempData["SaveResult"] = "Your Caretaker Entry was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your Caretaker Entry could not be updated.");
+            return View();
+        }
+        // GET: Delete
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var service = new CaretakerService();
+            var model = service.GetCaretakerByID(id);
+
+            return View(model);
+        }
+
+        // POST: Delete
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = new CaretakerService();
+
+            service.DeleteCaretaker(id);
+
+            TempData["SaveResult"] = "Your Caretaker Entry was deleted.";
+
+            return RedirectToAction("Index");
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<FosterPetCare.WebMVC.Models.CaretakerEntry>
+﻿@model IEnumerable<FosterPetCare.Models.Caretaker.CaretakerEntry>
 
 @{
     ViewBag.Title = "Index";
@@ -46,9 +46,9 @@
             @Html.DisplayFor(modelItem => item.AnimalTypeCaretaker)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new { id=item.CaretakerID}) |
+            @Html.ActionLink("Details", "Details", new {id=item.CaretakerID}) |
+            @Html.ActionLink("Delete", "Delete", new {id=item.CaretakerID})
         </td>
     </tr>
 }

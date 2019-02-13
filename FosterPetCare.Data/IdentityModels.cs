@@ -34,6 +34,7 @@ namespace FosterPetCare.Data
 
         public DbSet<Animal> Animals { get; set; }
         public DbSet<Caretaker> Caretakers { get; set; }
+        public DbSet<History> Histories { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
