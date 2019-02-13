@@ -62,6 +62,10 @@
     <Compile Include="Caretaker\CaretakerDetail.cs" />
     <Compile Include="Caretaker\CaretakerEdit.cs" />
     <Compile Include="Caretaker\CaretakerEntry.cs" />
+    <Compile Include="History\HistoryCreate.cs" />
+    <Compile Include="History\HistoryDetail.cs" />
+    <Compile Include="History\HistoryEdit.cs" />
+    <Compile Include="History\HistoryEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,8 +78,6 @@
       <Name>FosterPetCare.Data</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="History\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
