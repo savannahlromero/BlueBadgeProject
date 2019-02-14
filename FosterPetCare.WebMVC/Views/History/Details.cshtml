@@ -1,0 +1,74 @@
+﻿@model FosterPetCare.Models.History.HistoryDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HistoryDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HistoryID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HistoryID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnimalID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaretakerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaretakerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnimalName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaretakerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaretakerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HistoryCareType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HistoryCareType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfCareStart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfCareStart)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -82,6 +82,7 @@ namespace FosterPetCare.Services
                 entity.AnimalID = model.AnimalID;
                 entity.CaretakerID = model.CaretakerID;
                 entity.Animal.AnimalName = model.AnimalName;
+                //I need to figure out how to pass through the animal and caretaker through the update history method.
                 entity.Caretaker.CaretakerName = model.CaretakerName;
                 entity.HistoryCareType = model.HistoryCareType;
                 entity.DateOfCareStart = model.DateOfCareStart;

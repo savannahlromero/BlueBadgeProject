@@ -11,16 +11,25 @@ namespace FosterPetCare.Models.History
     public class HistoryCreate
     {
         [Required]
+        [Display(Name = "Animal ID")]
         public int AnimalID { get; set; }
+
         [Required]
+        [Display(Name = "Caretaker ID")]
         public int CaretakerID { get; set; }
-        [Required]
+
+        [Display(Name = "Name of Animal")]
         public string AnimalName { get; set; }
-        [Required]
+
+        [Display(Name = "Name of Caretaker")]
         public string CaretakerName { get; set; }
+
         [Required]
+        [Display(Name = "Foster or Volunteer Care?")]
         public HistoryCareType HistoryCareType { get; set; }
+
         [Required]
+        [Display(Name = "Initial Date of Care")]
         public DateTime DateOfCareStart { get; set; }
     }
 }

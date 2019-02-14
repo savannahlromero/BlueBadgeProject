@@ -9,6 +9,18 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+
+}
 <table class="table">
     <tr>
         <th>
@@ -28,29 +40,30 @@
         </th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CaretakerID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CaretakerName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CaretakerType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateJoinedCaretaker)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AnimalTypeCaretaker)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CaretakerID}) |
-            @Html.ActionLink("Details", "Details", new {id=item.CaretakerID}) |
-            @Html.ActionLink("Delete", "Delete", new {id=item.CaretakerID})
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CaretakerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CaretakerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CaretakerType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateJoinedCaretaker)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalTypeCaretaker)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CaretakerID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CaretakerID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CaretakerID })
+            </td>
+        </tr>
+    }
 
 </table>

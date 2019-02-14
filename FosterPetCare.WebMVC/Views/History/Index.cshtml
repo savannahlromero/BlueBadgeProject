@@ -1,0 +1,72 @@
+﻿@model IEnumerable<FosterPetCare.Models.History.HistoryEntry>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Index</h2>
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HistoryID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnimalName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CaretakerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HistoryCareType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfCareStart)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HistoryID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CaretakerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HistoryCareType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfCareStart)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.HistoryID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.HistoryID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.HistoryID })
+            </td>
+        </tr>
+    }
+
+</table>
