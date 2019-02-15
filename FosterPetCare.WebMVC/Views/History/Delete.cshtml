@@ -1,0 +1,80 @@
+﻿@model FosterPetCare.Models.History.HistoryDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>HistoryDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HistoryID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HistoryID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnimalID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaretakerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaretakerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnimalName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaretakerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaretakerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HistoryCareType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HistoryCareType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfCareStart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfCareStart)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

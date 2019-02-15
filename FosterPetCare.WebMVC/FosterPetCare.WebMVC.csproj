@@ -216,7 +216,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -253,10 +255,11 @@
     <Content Include="Views\Caretaker\Details.cshtml" />
     <Content Include="Views\Caretaker\Edit.cshtml" />
     <Content Include="Views\Caretaker\Delete.cshtml" />
-    <Content Include="Views\History\Index.cshtml" />
     <Content Include="Views\History\Create.cshtml" />
     <Content Include="Views\History\Details.cshtml" />
     <Content Include="Views\History\Edit.cshtml" />
+    <Content Include="Views\History\Delete.cshtml" />
+    <Content Include="Views\History\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

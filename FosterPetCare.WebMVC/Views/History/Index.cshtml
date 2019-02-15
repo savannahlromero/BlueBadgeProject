@@ -61,10 +61,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.DateOfCareStart)
             </td>
+
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.HistoryID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.HistoryID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.HistoryID })
+                @Html.ActionLink("Details", "Details", new { id = item.HistoryID })
+                | @Html.ActionLink("Delete", "Delete", new { id = item.HistoryID })
             </td>
         </tr>
     }
