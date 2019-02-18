@@ -64,6 +64,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FosterPetCare.Contracts\FosterPetCare.Contracts.csproj">
+      <Project>{2653B018-DBEF-451E-91C2-51FB574B2CD0}</Project>
+      <Name>FosterPetCare.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FosterPetCare.Data\FosterPetCare.Data.csproj">
       <Project>{9e9bcd54-bd78-4a51-9091-1c3154cd882c}</Project>
       <Name>FosterPetCare.Data</Name>

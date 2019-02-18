@@ -18,6 +18,7 @@ namespace FosterPetCare.WebMVC.Controllers
             return View(model);
         }
         // GET: Create
+        [Authorize(Roles = "Admin, Staff")]
         public ActionResult Create()
         {
             var animalService = new AnimalService();
@@ -62,6 +63,7 @@ namespace FosterPetCare.WebMVC.Controllers
         }
 
         // GET: Edit
+        [Authorize(Roles = "Admin, Staff")]
         public ActionResult Edit(int id)
         {
             var animalService = new AnimalService();
@@ -121,6 +123,7 @@ namespace FosterPetCare.WebMVC.Controllers
             return View();
         }
         // GET: Delete
+        [Authorize(Roles = "Admin")]
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {

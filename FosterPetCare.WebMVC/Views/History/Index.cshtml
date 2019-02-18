@@ -63,9 +63,15 @@
             </td>
 
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.HistoryID }) |
+                @if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.HistoryID }) <text> | </text>
+                }
                 @Html.ActionLink("Details", "Details", new { id = item.HistoryID })
-                | @Html.ActionLink("Delete", "Delete", new { id = item.HistoryID })
+                @if (User.IsInRole("Admin"))
+                {
+                    <text> | </text>@Html.ActionLink("Delete", "Delete", new { id = item.HistoryID })
+                }
             </td>
         </tr>
     }
