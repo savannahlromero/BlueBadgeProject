@@ -1,4 +1,5 @@
-﻿using FosterPetCare.Data;
+﻿using FosterPetCare.Contracts;
+using FosterPetCare.Data;
 using FosterPetCare.Models.Caretaker;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FosterPetCare.Services
 {
-    public class CaretakerService
+    public class CaretakerService: ICaretakerService
     {
         public bool CreateCaretaker(CaretakerCreate model)
         {

@@ -6,10 +6,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FosterPetCare.Contracts;
 
 namespace FosterPetCare.Services
 {
-    public class AnimalService
+    public class AnimalService: IAnimalService
     {
 
         public bool CreateAnimal(AnimalCreate model)

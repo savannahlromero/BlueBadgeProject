@@ -1,4 +1,5 @@
-﻿using FosterPetCare.Data;
+﻿using FosterPetCare.Contracts;
+using FosterPetCare.Data;
 using FosterPetCare.Models.History;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FosterPetCare.Services
 {
-    public class HistoryService
+    public class HistoryService: IHistoryService
     {
         public bool CreateHistory(HistoryCreate model)
         {
