@@ -92,12 +92,38 @@ h1 {
     }
 
 h2 {
-    color: #61B329;
+    color: #0198E1;
 }
 
     h2:hover {
-        color: #ED7D31;
+        color: #ff0040;
     }
+h3 {
+    color: #ff0040;
+}
+
+    h3:hover {
+        color: #0198E1;
+    }
+a:link {
+    color: #81B290;
+}
+
+a:visited {
+    color: #718523;
+}
+
+a:hover {
+    color: #ff0040;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+tr:nth-child(even) {
+    background-color: #FFF6E6;
+}
 
 .mainBanner img{
 width: 50%;
