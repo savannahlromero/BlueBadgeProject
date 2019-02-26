@@ -20,7 +20,7 @@ namespace FosterPetCare.Models.Caretaker
         [Display(Name = "Date Joined")]
         public DateTime DateJoinedCaretaker { get; set; }
         [Required]
-        [Display(Name = "Animal Type")]
+        [Display(Name = "Preferred Animal Type")]
         public AnimalType AnimalTypeCaretaker { get; set; }
     }
 }

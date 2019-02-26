@@ -1,24 +1,4 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    background-color: white;
-}
-
-h1 {
-    color: #ff0040;
-}
-
-    h1:hover {
-        color: #0198E1;
-    }
-
-h2 {
-    color: #ff0040;
-}
-
-    h2:hover {
-        color: #0198E1;
-    }
+﻿
 /* SO BEGINS MY HOPE OF CHANGING THE CSS*/
 .navbar-inverse {
     background-color: white;
@@ -66,7 +46,7 @@ h2 {
     }
         .jumbotron h1:hover,
         .jumbotron .h1:hover {
-            color: #FF7F50;
+            color: #ED7D31;
         }
 
     .jumbotron p {
@@ -89,7 +69,39 @@ h2 {
 .jumbotron .container {
     max-width: 100%;
 
-/*END OF BOOTSTRAP RIP + ADJUST*/
+}
+ /*END OF BOOTSTRAP RIP + ADJUST*/
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 50%;
+}
+
+h1 {
+    color: #61B329;
+}
+
+    h1:hover {
+        color: #ED7D31;
+    }
+
+h2 {
+    color: #61B329;
+}
+
+    h2:hover {
+        color: #ED7D31;
+    }
+
+.mainBanner img{
+width: 50%;
+}
     .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
         color: #0198E1;
         background-color: #080808;
